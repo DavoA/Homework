@@ -64,14 +64,31 @@
 # oletter = "l"
 # print(myreplace(sentence,oletter,nletter,cnt))
 
-def myfind(mstr,obj):
+# def myfind(mstr,obj):
+#   if type(mstr) != str:
+#     print("Shuld be string")
+#     return None
+#   for i in range(len(mstr)):
+#     if mstr[i] == object:
+#       return i
+#   return -1
+# sentence = "hello world"
+# object = "k"
+# print(myfind(sentence,object))
+
+def myswap(mstr):
   if type(mstr) != str:
     print("Shuld be string")
     return None
-  for i in range(len(mstr)):
-    if mstr[i] == object:
-      return i
-  return -1
-sentence = "hello world"
-object = "k"
-print(myfind(sentence,object))
+  nmstr = ""
+  for i in mstr:
+    if i.isalpha():
+      if ord(i) >= 97 and ord(i)<=122:
+        nmstr+=chr(ord(i)-32)
+      elif ord(i) >= 65 and ord(i)<=90:
+        nmstr+=chr(ord(i)+32)
+    else:
+      nmstr+=i
+  return nmstr
+sentence = "heLLo wOrlD"
+print(myswap(sentence))
