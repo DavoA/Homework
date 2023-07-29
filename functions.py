@@ -46,20 +46,32 @@
 # sentence = "hello world"
 # print(myupper(sentence))
 
-def myreplace(mstr,ol,nl,cnt):
+# def myreplace(mstr,ol,nl,cnt):
+#   if type(mstr) != str:
+#     print("Shuld be string")
+#     return None
+#   nmstr = ""
+#   for i in mstr:
+#     if cnt!=0 and i==ol:
+#       nmstr+=nl
+#       cnt-=1
+#     else:
+#       nmstr+=i
+#   return nmstr
+# sentence = "hello world"
+# cnt = 2
+# nletter = "k"
+# oletter = "l"
+# print(myreplace(sentence,oletter,nletter,cnt))
+
+def myfind(mstr,obj):
   if type(mstr) != str:
     print("Shuld be string")
     return None
-  nmstr = ""
-  for i in mstr:
-    if cnt!=0 and i==ol:
-      nmstr+=nl
-      cnt-=1
-    else:
-      nmstr+=i
-  return nmstr
+  for i in range(len(sentence)):
+    if sentence[i] == object:
+      return i
+  return -1
 sentence = "hello world"
-cnt = 2
-nletter = "k"
-oletter = "l"
-print(myreplace(sentence,oletter,nletter,cnt))
+object = "k"
+print(myfind(sentence,object))
