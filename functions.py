@@ -20,11 +20,11 @@ def mytitle(mstr):
     print("Shuld be string")
     return None
   nmstr = ""
-  for i in range(len(sentence)):
-    if sentence[i] == sentence[0] or sentence[i-1] == " ":
-      nmstr+=sentence[i].upper()
+  for i in range(len(mstr)):
+    if mstr[i] == mstr[0] or mstr[i-1] == " ":
+      nmstr+=mstr[i].upper()
     else:
-      nmstr+=sentence[i]
+      nmstr+=mstr[i]
   return nmstr
 sentence = "hello  world"
 print(mytitle(sentence))
