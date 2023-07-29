@@ -68,8 +68,8 @@ def myfind(mstr,obj):
   if type(mstr) != str:
     print("Shuld be string")
     return None
-  for i in range(len(sentence)):
-    if sentence[i] == object:
+  for i in range(len(mstr)):
+    if mstr[i] == object:
       return i
   return -1
 sentence = "hello world"
