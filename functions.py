@@ -111,15 +111,27 @@
 # sentence = "hello world"
 # print(mycapitalize(sentence))
 
-def mycount(mstr,obj):
+# def mycount(mstr,obj):
+#   if type(mstr) != str:
+#     print("Shuld be string")
+#     return None
+#   cnt=0
+#   for i in mstr:
+#     if i == letter:
+#       cnt+=1
+#   return cnt
+# sentence = "hello world"
+# letter = "o"
+# print(mycount(sentence,letter))
+
+def myindex(mstr,obj):
   if type(mstr) != str:
     print("Shuld be string")
     return None
-  cnt=0
-  for i in mstr:
-    if i == letter:
-      cnt+=1
-  return cnt
+  for i in range(len(mstr)):
+    if mstr[i] == object:
+      return i
+  return None
 sentence = "hello world"
-letter = "o"
-print(mycount(sentence,letter))
+object = "l"
+print(myindex(sentence,object))
