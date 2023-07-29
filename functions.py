@@ -93,20 +93,33 @@
 # sentence = "heLLo wOrlD"
 # print(myswap(sentence))
 
-def mycapitalize(mstr):
+# def mycapitalize(mstr):
+#   if type(mstr) != str:
+#     print("Shuld be string")
+#     return None
+#   nmstr = ""
+#   for i in range(len(mstr)):
+#     if mstr[i].isalpha():
+#       if mstr[i].isupper():
+#         return mstr
+#       nmstr+=chr(ord(mstr[i])-32)
+#       nmstr+=mstr[i+1:len(mstr)]
+#       break
+#     else:
+#       nmstr+=mstr[i]
+#   return nmstr
+# sentence = "hello world"
+# print(mycapitalize(sentence))
+
+def mycount(mstr,obj):
   if type(mstr) != str:
     print("Shuld be string")
     return None
-  nmstr = ""
-  for i in range(len(mstr)):
-    if mstr[i].isalpha():
-      if mstr[i].isupper():
-        return mstr
-      nmstr+=chr(ord(mstr[i])-32)
-      nmstr+=mstr[i+1:len(mstr)]
-      break
-    else:
-      nmstr+=mstr[i]
-  return nmstr
+  cnt=0
+  for i in mstr:
+    if i == letter:
+      cnt+=1
+  return cnt
 sentence = "hello world"
-print(mycapitalize(sentence))
+letter = "o"
+print(mycount(sentence,letter))
