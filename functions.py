@@ -15,16 +15,33 @@
 # sentence = "    Hello  World "
 # print(mystrip(sentence))
 
-def mytitle(mstr):
+# def mytitle(mstr):
+#   if type(mstr) != str:
+#     print("Shuld be string")
+#     return None
+#   nmstr = ""
+#   for i in range(len(mstr)):
+#     if mstr[i] == mstr[0] or mstr[i-1] == " ":
+#       nmstr+=mstr[i].upper()
+#     else:
+#       nmstr+=mstr[i]
+#   return nmstr
+# sentence = "hello  world"
+# print(mytitle(sentence))
+
+def myupper(mstr):
   if type(mstr) != str:
     print("Shuld be string")
     return None
   nmstr = ""
-  for i in range(len(mstr)):
-    if mstr[i] == mstr[0] or mstr[i-1] == " ":
-      nmstr+=mstr[i].upper()
+  for i in mstr:
+    if i.isalpha():
+      if ord(i) >= 97 and ord(i)<=122:
+        nmstr+=chr(ord(i)-32)
+      else:
+        nmstr+=i
     else:
-      nmstr+=mstr[i]
+      nmstr+=i
   return nmstr
-sentence = "hello  world"
-print(mytitle(sentence))
+sentence = "hello world"
+print(myupper(sentence))
