@@ -124,14 +124,31 @@
 # letter = "o"
 # print(mycount(sentence,letter))
 
-def myindex(mstr,obj):
+# def myindex(mstr,obj):
+#   if type(mstr) != str:
+#     print("Shuld be string")
+#     return None
+#   for i in range(len(mstr)):
+#     if mstr[i] == object:
+#       return i
+#   return None
+# sentence = "hello world"
+# object = "l"
+# print(myindex(sentence,object))
+
+def mylower(mstr):
   if type(mstr) != str:
     print("Shuld be string")
     return None
-  for i in range(len(mstr)):
-    if mstr[i] == object:
-      return i
-  return None
-sentence = "hello world"
-object = "l"
-print(myindex(sentence,object))
+  nmstr = ""
+  for i in mstr:
+    if i.isalpha():
+      if ord(i) >= 65 and ord(i)<=90:
+        nmstr+=chr(ord(i)+32)
+      else:
+        nmstr+=i
+    else:
+      nmstr+=i
+  return nmstr
+sentence = "HELLO WORLD"
+print(mylower(sentence))
