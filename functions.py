@@ -29,19 +29,37 @@
 # sentence = "hello  world"
 # print(mytitle(sentence))
 
-def myupper(mstr):
+# def myupper(mstr):
+#   if type(mstr) != str:
+#     print("Shuld be string")
+#     return None
+#   nmstr = ""
+#   for i in mstr:
+#     if i.isalpha():
+#       if ord(i) >= 97 and ord(i)<=122:
+#         nmstr+=chr(ord(i)-32)
+#       else:
+#         nmstr+=i
+#     else:
+#       nmstr+=i
+#   return nmstr
+# sentence = "hello world"
+# print(myupper(sentence))
+
+def myreplace(mstr,ol,nl,cnt):
   if type(mstr) != str:
     print("Shuld be string")
     return None
   nmstr = ""
   for i in mstr:
-    if i.isalpha():
-      if ord(i) >= 97 and ord(i)<=122:
-        nmstr+=chr(ord(i)-32)
-      else:
-        nmstr+=i
+    if cnt!=0 and i==ol:
+      nmstr+=nl
+      cnt-=1
     else:
       nmstr+=i
   return nmstr
 sentence = "hello world"
-print(myupper(sentence))
+cnt = 2
+nletter = "k"
+oletter = "l"
+print(myreplace(sentence,oletter,nletter,cnt))
